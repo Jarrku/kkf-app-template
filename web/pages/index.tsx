@@ -14,7 +14,10 @@ export default () => {
               {data.viewer && data.viewer.name ? (
                 <Flex flexDirection="column" alignItems="center">
                   <Heading>
-                    👋 Hello, {data.viewer ? data.viewer.name : "anonymous"}!
+                    <span role="img" aria-label="Hand">
+                      👋
+                    </span>{" "}
+                    Hello, {data.viewer ? data.viewer.name : "anonymous"}!
                   </Heading>
                   <Box mt={2}>
                     <a href="/api/auth/logout">
